@@ -1,0 +1,24 @@
+-- Table for Unit 1, Program 2
+CREATE TABLE STUDENT_MARKS (
+    Stud_ID NUMBER PRIMARY KEY,
+    Stud_Name VARCHAR2(50),
+    M1 NUMBER, M2 NUMBER, M3 NUMBER, M4 NUMBER, M5 NUMBER,
+    Total NUMBER,
+    Percentage NUMBER,
+    Grade VARCHAR2(2)
+);
+
+-- Table for Unit 1, 2, 3, 4, and 5
+CREATE TABLE STAFF (
+    SID NUMBER PRIMARY KEY,
+    SName VARCHAR2(50),
+    Dno NUMBER,
+    Dname VARCHAR2(50),
+    Gender CHAR(1),
+    Age NUMBER,
+    BasicPay NUMBER
+);
+
+-- Tables for Unit 3 and 5 backups/triggers
+CREATE TABLE STAFF_BACKUP AS SELECT * FROM STAFF WHERE 1=2;
+CREATE TABLE NEWSTAFF AS SELECT * FROM STAFF WHERE 1=2;
